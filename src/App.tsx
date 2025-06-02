@@ -9,7 +9,7 @@ import TipoDenuncia from './pages/TipoDenuncia'
 function App() {
   return (
     <>
-      <Header />  {/* siempre ocupa todo el ancho */}
+      <Header />  
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

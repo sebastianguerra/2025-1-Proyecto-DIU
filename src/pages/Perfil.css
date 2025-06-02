@@ -1,0 +1,60 @@
+.profile-container {
+  max-width: 600px;
+  margin: 2rem auto; /* Centrado horizontal con margen vertical */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos hijos horizontalmente */
+  justify-content: center; /* Centra verticalmente (opcional) */
+  min-height: calc(100vh - 150px); /* Ajusta según el tamaño de tu footer */
+}
+
+.profile-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center; /* Centra el texto del título */
+}
+
+.user-info, .contact-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%; /* Ocupa todo el ancho disponible del contenedor */
+  box-sizing: border-box; /* Incluye padding en el ancho */
+  text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+}
+
+.user-info h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+  text-align: center; /* Centra el nombre del usuario */
+}
+
+.contact-info h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+  text-align: center; /* Centra el título "Contactos" */
+}
+
+p {
+  margin: 8px 0;
+  color: #666;
+}
+
+strong {
+  color: #333;
+}
+
+/* Opcional: Para centrar completamente en la pantalla (incluyendo verticalmente) */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
