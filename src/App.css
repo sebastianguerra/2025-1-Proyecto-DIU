@@ -1,14 +1,16 @@
-
-/* HEADER BLOQUE SUPERIOR */
+header,
 .header {
-  width: 100%;
-  background-color: #f1f2f4;  
-  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
 }
+
 
 .header-left {
   display: flex;
@@ -30,6 +32,10 @@
   color: #333;
 }
 
+.main-content {
+  padding-top: 70px;  /* alto del header */
+  padding-bottom: 70px;  /* alto del footer */
+}
 
 .logo {
   height: 6em;

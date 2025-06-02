@@ -51,10 +51,8 @@ strong {
 }
 
 /* Opcional: Para centrar completamente en la pantalla (incluyendo verticalmente) */
+/* Elimina el centrado global del body para evitar conflictos con el centrado del contenedor */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   margin: 0;
 }
