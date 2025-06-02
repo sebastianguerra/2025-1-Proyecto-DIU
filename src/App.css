@@ -1,9 +1,40 @@
-#root {
+.main-content {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
+
+/* HEADER BLOQUE SUPERIOR */
+.header {
+  width: 100%;
+  background-color: #f1f2f4;  
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.home-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto;
+  color: #333;
+}
+
 
 .logo {
   height: 6em;
