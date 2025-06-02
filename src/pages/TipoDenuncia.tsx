@@ -6,6 +6,10 @@ import "./TipoDenuncia.css";
 // Importa tus imágenes
 import viasPavimentoImg from "@/assets/ViasYPavimento.webp"
 import basuraImg from "@/assets/basura.jpg";
+import semaforosImg from "@/assets/Semaforo.jpg";
+import riesgosImg from "@/assets/Riesgos.avif";
+import espaciosPublicosImg from "@/assets/EspaciosPublicos.avif";
+import viviendaImg from "@/assets/Vivienda.jpg";
 
 type Denuncia = {
     letra: string;
@@ -32,25 +36,25 @@ function TiposDenuncia(){
       letra: 'C',
       tipo: 'Semáforos y señalética', 
       descripcion: 'Semáforo apagado, señal de tránsito vandalizada, señalización faltante en zona escolar',
-    //imagen: semaforosImg
+      imagen: semaforosImg
     },
     { 
       letra: 'D',
       tipo: 'Riesgos inmediatos', 
       descripcion: 'Fuga de agua o gas, poste eléctrico a punto de caer o cable expuesto',
-    //imagen: riesgosImg
+      imagen: riesgosImg
     },
     { 
       letra: 'E',
       tipo: 'Espacios Públicos', 
       descripcion: 'Bancas rotas, falta de poda, ruido excesivo, vertido de aguas servidas',
-    //imagen: espaciosPublicosImg
+      imagen: espaciosPublicosImg
     },
     { 
       letra: 'F',
       tipo: 'Vivienda y Construcción', 
       descripcion: 'Obras sin permiso municipal, riesgo de derrumbe, animales abandonados, fauna urbana en zonas pobladas',
-    //imagen: viviendaImg
+      imagen: viviendaImg
     }
     ]);
 
@@ -116,11 +120,3 @@ function TiposDenuncia(){
 };
 
 export default TiposDenuncia;
-
-// Importa tus imágenes
-/*
-import basuraImg from "@/assets/denuncias/basura.jpg";
-import semaforosImg from "@/assets/denuncias/semaforos.jpg";
-import riesgosImg from "@/assets/denuncias/riesgos.jpg";
-import espaciosPublicosImg from "@/assets/denuncias/espacios-publicos.jpg";
-import viviendaImg from "@/assets/denuncias/vivienda.jpg";*/
