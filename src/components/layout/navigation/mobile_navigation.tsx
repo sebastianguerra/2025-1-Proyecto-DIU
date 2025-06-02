@@ -24,7 +24,7 @@ function MobileNav() {
                 </IconButton>
             </Link>
 
-            <Link to ="/IngresarDenuncia">
+            <Link to ="/TipoDenuncia">
                 <IconButton
                     colorScheme="teal"
                     variant="ghost"
