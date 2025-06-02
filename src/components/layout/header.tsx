@@ -1,6 +1,7 @@
 import { Box, HStack, IconButton, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { LuChrome } from "react-icons/lu";
+import { House } from 'lucide-react';
+
 
 function Header() {
   return (
@@ -8,14 +9,13 @@ function Header() {
       position="fixed"
       top="0"
       w="full"
-      bgColor="#f1f2f4"  // gris claro tipo fondo de chat
+      bgColor="#f1f2f4"
       borderBottomWidth="0.5px"
       borderBottomColor="black"
       padding={4}
-      zIndex={10}  // para estar por encima del contenido
+      zIndex={10} 
     >
       <HStack justify="space-between" w="full">
-        {/* Botón a Inicio con ícono de casa */}
         <Link to="/">
           <IconButton
             aria-label="Inicio"
@@ -23,17 +23,13 @@ function Header() {
             variant="ghost"
             size="lg"
           >
-            <LuChrome />
+            <House />
           </IconButton>
         </Link>
-
-        {/* Título al centro */}
         <Text fontSize="xl" fontWeight="bold" color="#333">
           MuniDenuncia
         </Text>
-
-        {/* Espacio derecho vacío o para futuro (puedes agregar otro botón aquí) */}
-        <Box w="40px" />  {/* mantiene el equilibrio visual */}
+        <Box w="40px" /> 
       </HStack>
     </Box>
   );
