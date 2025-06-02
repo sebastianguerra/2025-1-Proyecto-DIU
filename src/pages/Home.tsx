@@ -1,6 +1,10 @@
+import MobileNav from "@/components/layout/navigation/mobile_navigation";
 function Home(){
     return(
-    <h1>Esta es una pagina de bienvenida</h1>
+        <div>
+            <h1>Pagina Principal</h1>
+            <MobileNav></MobileNav>
+        </div>
     )
 }
 

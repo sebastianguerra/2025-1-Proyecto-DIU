@@ -1,5 +1,5 @@
 import { Box, HStack, IconButton } from "@chakra-ui/react";
-import { LuBookMarked, LuCirclePlus, LuLibraryBig } from "react-icons/lu";
+import { LuScanEye, LuOctagonAlert, LuCircleUserRound } from "react-icons/lu";
 import { Link } from "react-router-dom";
 
 function MobileNav() {
@@ -20,16 +20,16 @@ function MobileNav() {
                     colorScheme="teal"
                     variant="ghost"
                     size="lg"
-                    > <LuLibraryBig />
+                    > <LuScanEye />
                 </IconButton>
             </Link>
 
-            <Link to ="/denuncia">
+            <Link to ="/IngresarDenuncia">
                 <IconButton
                     colorScheme="teal"
                     variant="ghost"
                     size="lg"
-                    > <LuCirclePlus />
+                    > <LuOctagonAlert />
                 </IconButton>
             </Link>
 
@@ -38,7 +38,7 @@ function MobileNav() {
                     colorScheme="teal"
                     variant="ghost"
                     size="lg"
-                    > <LuBookMarked />
+                    > <LuCircleUserRound />
                 </IconButton>
             </Link>
       </HStack>
