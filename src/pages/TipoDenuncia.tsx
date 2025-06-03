@@ -4,7 +4,6 @@ import {useState } from "react"
 import "./TipoDenuncia.css";
 import { useNavigate } from "react-router-dom";
 
-// Importa tus imágenes
 import viasPavimentoImg from "@/assets/ViasYPavimento.webp"
 import basuraImg from "@/assets/basura.jpg";
 import semaforosImg from "@/assets/Semaforo.jpg";
@@ -16,7 +15,7 @@ type Denuncia = {
     letra: string;
     tipo: string;
     descripcion: string;
-    imagen?: string; // Imagen opcional
+    imagen?: string;
     path: string;
 }
 
@@ -77,7 +76,7 @@ function TiposDenuncia(){
                 <VStack gap={4} w="100%" maxW="md">
                     {Tipos.map((denuncia, index) => (
                         <Box
-                            as="button" // Convertimos el Box en un botón
+                            as="button"
                             key={index}
                             border="1px solid"
                             borderColor="gray.200"
@@ -88,14 +87,14 @@ function TiposDenuncia(){
                             boxShadow="sm"
                             _hover={{ 
                                 boxShadow: 'md',
-                                bg: 'gray.50', // Efecto hover más evidente
+                                bg: 'gray.50',
                                 cursor: 'pointer'
                             }}
                             _active={{
-                                bg: 'gray.100' // Efecto al hacer clic
+                                bg: 'gray.100'
                             }}
                             onClick={() => handleDenunciaClick(denuncia.path)}
-                            textAlign="left" // Alineación del texto a la izquierda
+                            textAlign="left"
                         >
                             <Flex align="center" mb={3}>
                                 <Flex
