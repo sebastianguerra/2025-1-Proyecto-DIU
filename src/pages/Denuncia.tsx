@@ -1,32 +1,33 @@
-import MobileNav from "@/components/layout/navigation/mobile_navigation";
-import { useNavigate } from 'react-router-dom';
-import './IngresarDenuncia.css';
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./IngresarDenuncia.css";
 
 const IngresarDenuncia = () => {
-  const [denuncia, setDenuncia] = useState('');
-  const [fecha, setFecha] = useState('');
+  const [denuncia, setDenuncia] = useState("");
+  const [fecha, setFecha] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     console.log({ denuncia, fecha });
-    
-    const numeroSeguimiento = Math.floor(10000 + Math.random() * 90000).toString();
-    
-    navigate('/', { 
-      state: { 
+
+    const numeroSeguimiento = Math.floor(
+      10000 + Math.random() * 90000
+    ).toString();
+
+    navigate("/", {
+      state: {
         showConfirmation: true,
-        numeroSeguimiento: numeroSeguimiento
-      }
+        numeroSeguimiento: numeroSeguimiento,
+      },
     });
   };
 
   return (
     <div className="denuncia-container">
       <h1>Ingresar Denuncia</h1>
-      
+
       <form onSubmit={handleSubmit} className="denuncia-form">
         <div className="form-section">
           <h2>Ingrese su denuncia</h2>
@@ -56,8 +57,6 @@ const IngresarDenuncia = () => {
           </button>
         </div>
       </form>
-      
-      <MobileNav />
     </div>
   );
 };

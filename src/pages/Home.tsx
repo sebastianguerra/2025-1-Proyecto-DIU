@@ -1,20 +1,18 @@
-import { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import MobileNav from "@/components/layout/navigation/mobile_navigation";
-import ConfirmacionModal from '@/components/layout/ConfirmacionModal';
+import ConfirmacionModal from "@/components/layout/ConfirmacionModal";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function Home() {
   const location = useLocation();
   const [showModal, setShowModal] = useState(false);
-  const [numeroSeguimiento, setNumeroSeguimiento] = useState('');
+  const [numeroSeguimiento, setNumeroSeguimiento] = useState("");
 
   useEffect(() => {
-
     if (location.state?.showConfirmation) {
       setNumeroSeguimiento(location.state.numeroSeguimiento);
       setShowModal(true);
-      
-      window.history.replaceState({}, '');
+
+      window.history.replaceState({}, "");
     }
   }, [location]);
 
@@ -27,8 +25,6 @@ function Home() {
         onClose={() => setShowModal(false)}
         numeroSeguimiento={numeroSeguimiento}
       />
-      
-      <MobileNav />
     </div>
   );
 }
