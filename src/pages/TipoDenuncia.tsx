@@ -2,13 +2,6 @@ import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import basuraImg from "@/assets/basura.jpg";
-import espaciosPublicosImg from "@/assets/EspaciosPublicos.avif";
-import riesgosImg from "@/assets/Riesgos.avif";
-import semaforosImg from "@/assets/Semaforo.jpg";
-import viasPavimentoImg from "@/assets/ViasYPavimento.webp";
-import viviendaImg from "@/assets/Vivienda.jpg";
-
 type Denuncia = {
   letra: string;
   tipo: string;
@@ -24,7 +17,7 @@ function TiposDenuncia() {
       letra: "A",
       tipo: "Vías y Pavimento",
       descripcion: "Baches, pavimento desgastado",
-      imagen: viasPavimentoImg,
+      imagen: "/ViasYPavimento.webp",
       path: "/IngresarDenuncia",
     },
     {
@@ -32,7 +25,7 @@ function TiposDenuncia() {
       tipo: "Recolección de basura",
       descripcion:
         "Problemas camión de basura, basura en vía pública, contenedores desbordados",
-      imagen: basuraImg,
+      imagen: "/Basura.jpg",
       path: "/IngresarDenuncia",
     },
     {
@@ -40,7 +33,7 @@ function TiposDenuncia() {
       tipo: "Semáforos y señalética",
       descripcion:
         "Semáforo apagado, señal de tránsito vandalizada, señalización faltante en zona escolar",
-      imagen: semaforosImg,
+      imagen: "/Semaforo.jpg",
       path: "/IngresarDenuncia",
     },
     {
@@ -48,7 +41,7 @@ function TiposDenuncia() {
       tipo: "Riesgos inmediatos",
       descripcion:
         "Fuga de agua o gas, poste eléctrico a punto de caer o cable expuesto",
-      imagen: riesgosImg,
+      imagen: "/Riesgos.avif",
       path: "/IngresarDenuncia",
     },
     {
@@ -56,7 +49,7 @@ function TiposDenuncia() {
       tipo: "Espacios Públicos",
       descripcion:
         "Bancas rotas, falta de poda, ruido excesivo, vertido de aguas servidas",
-      imagen: espaciosPublicosImg,
+      imagen: "/EspaciosPublicos.avif",
       path: "/IngresarDenuncia",
     },
     {
@@ -64,7 +57,7 @@ function TiposDenuncia() {
       tipo: "Vivienda y Construcción",
       descripcion:
         "Obras sin permiso municipal, riesgo de derrumbe, animales abandonados, fauna urbana en zonas pobladas",
-      imagen: viviendaImg,
+      imagen: "/ViviendaYConstruccion.jpg",
       path: "/IngresarDenuncia",
     },
   ]);
