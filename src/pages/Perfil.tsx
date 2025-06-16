@@ -6,7 +6,6 @@ import {
   HStack,
   Image,
 } from "@chakra-ui/react";
-import FotoDePerfil from "@/assets/FotoDePerfil.png";
 
 function Perfil() {
   return (
@@ -39,7 +38,7 @@ function Perfil() {
             boxShadow="lg"
           >
             <Image
-              src={FotoDePerfil}
+              src="/FotoDePerfil.png"
               alt="Foto de perfil"
               w="100%"
               h="100%"
