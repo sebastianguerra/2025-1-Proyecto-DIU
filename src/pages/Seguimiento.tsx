@@ -1,5 +1,4 @@
-import { Box, VStack } from "@chakra-ui/react";
-import Map from "@/components/Map";
+import { Box, Heading, VStack } from "@chakra-ui/react";
 
 function Seguimiento() {
   return (
@@ -15,7 +14,14 @@ function Seguimiento() {
       justifyContent="center"
     >
       <VStack gap={6}>
-        <Map />
+        <Heading 
+          as="h1" 
+          size="xl" 
+          textAlign="center" 
+          color="gray.800"
+        >
+          Esto es la página de seguimiento
+        </Heading>
       </VStack>
     </Box>
   );

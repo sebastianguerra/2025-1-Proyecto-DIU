@@ -67,7 +67,7 @@ function Map() {
     : { zoom: 12, center: { lat: -33.45694, lng: -70.64827 } }; // Santiago, Chile
 
   return (
-    <Box w="90vw" h="80vh">
+    <Box w="full" h="full">
       <GoogleMap
         style={{ width: "100%", height: "100%" }}
         defaultCenter={defaults.center}
