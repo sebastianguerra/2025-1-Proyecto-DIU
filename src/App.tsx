@@ -1,7 +1,7 @@
 import { Center } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/layout/header";
-import MobileNav from "./components/layout/navigation/mobile_navigation";
+import MobileNav from "./components/layout/mobile_navigation";
 import Denuncia from "./pages/Denuncia";
 import Home from "./pages/Home";
 import Perfil from "./pages/Perfil";
