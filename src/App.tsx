@@ -1,4 +1,3 @@
-import { Center } from "@chakra-ui/react";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/layout/header";
 import MobileNav from "./components/layout/mobile_navigation";
@@ -7,12 +6,13 @@ import Home from "./pages/Home";
 import Perfil from "./pages/Perfil";
 import Seguimiento from "./pages/Seguimiento";
 import TipoDenuncia from "./pages/TipoDenuncia";
+import { Box } from "@chakra-ui/react";
 
 function App() {
   return (
     <>
       <Header />
-      <Center w="full" h="100vh">
+      <Box w="full" h="full" py={20}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/IngresarDenuncia" element={<Denuncia />} />
@@ -20,7 +20,7 @@ function App() {
           <Route path="/Perfil" element={<Perfil />} />
           <Route path="/TipoDenuncia" element={<TipoDenuncia />} />
         </Routes>
-      </Center>
+      </Box>
       <MobileNav />
     </>
   );
