@@ -1,38 +1,92 @@
+import {
+  Box,
+  Heading,
+  Text,
+  VStack,
+  HStack,
+  Image,
+} from "@chakra-ui/react";
 import FotoDePerfil from "@/assets/FotoDePerfil.png";
 
 function Perfil() {
   return (
-    <div className="profile-container">
-      <h1>Perfil</h1>
+    <Box
+      maxW="600px"
+      mx="auto"
+      p={5}
+      minH="100vh"
+      pt={20}
+      pb={20}
+    >
+      <VStack gap={8} align="stretch">
+        <Heading 
+          as="h1" 
+          size="xl" 
+          textAlign="center" 
+          color="gray.800"
+        >
+          Perfil
+        </Heading>
 
-      <div className="profile-picture-container">
-        <img
-          src={FotoDePerfil}
-          alt="Foto de perfil"
-          className="profile-picture"
-        />
-      </div>
+        <VStack gap={6}>
+          <Box
+            w="150px"
+            h="150px"
+            borderRadius="full"
+            overflow="hidden"
+            border="3px solid"
+            borderColor="gray.200"
+            boxShadow="lg"
+          >
+            <Image
+              src={FotoDePerfil}
+              alt="Foto de perfil"
+              w="100%"
+              h="100%"
+              objectFit="cover"
+            />
+          </Box>
 
-      <div className="user-info">
-        <h2>Nombre Apellido</h2>
-        <p>
-          <strong>Comuna:</strong> Santiago{" "}
-        </p>
-        <p>
-          <strong>Dirección:</strong> Calle Siempre Viva 742{" "}
-        </p>
-      </div>
+          <VStack gap={4} align="center">
+            <Heading as="h2" size="lg" color="gray.700">
+              Nombre Apellido
+            </Heading>
 
-      <div className="contact-info">
-        <h3>Contactos</h3>
-        <p>
-          <strong>Celular:</strong> +56 9 XXXX XXXX
-        </p>
-        <p>
-          <strong>Correo:</strong> miCorreo@gmail.com
-        </p>
-      </div>
-    </div>
+            <VStack gap={3} align="center">
+              <HStack gap={2}>
+                <Text fontWeight="bold" color="gray.600">Comuna:</Text>
+                <Text color="gray.800">Santiago</Text>
+              </HStack>
+              
+              <HStack gap={2}>
+                <Text fontWeight="bold" color="gray.600">Dirección:</Text>
+                <Text color="gray.800">Calle Siempre Viva 742</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+
+          <Box h="1px" bg="gray.200" w="100%" />
+
+          <VStack gap={4} align="center">
+            <Heading as="h3" size="md" color="gray.700">
+              Contactos
+            </Heading>
+            
+            <VStack gap={3} align="center">
+              <HStack gap={2}>
+                <Text fontWeight="bold" color="gray.600">Celular:</Text>
+                <Text color="gray.800">+56 9 XXXX XXXX</Text>
+              </HStack>
+
+              <HStack gap={2}>
+                <Text fontWeight="bold" color="gray.600">Correo:</Text>
+                <Text color="gray.800">miCorreo@gmail.com</Text>
+              </HStack>
+            </VStack>
+          </VStack>
+        </VStack>
+      </VStack>
+    </Box>
   );
 }
 

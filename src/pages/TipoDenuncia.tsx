@@ -1,7 +1,6 @@
 import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./TipoDenuncia.css";
 
 import basuraImg from "@/assets/basura.jpg";
 import espaciosPublicosImg from "@/assets/EspaciosPublicos.avif";
