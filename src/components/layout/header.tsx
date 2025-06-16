@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { House } from 'lucide-react';
 
 
-function Header() {
+function Header({ title }: { title: string }) {
   return (
     <Box
       position="fixed"
@@ -27,7 +27,7 @@ function Header() {
           </IconButton>
         </Link>
         <Text fontSize="xl" fontWeight="bold" color="#333">
-          MuniDenuncia
+          {title}
         </Text>
         <Box w="40px" /> 
       </HStack>
