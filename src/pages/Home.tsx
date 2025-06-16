@@ -1,10 +1,12 @@
-import { Box, Heading, VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import ConfirmacionModal from "@/components/layout/ConfirmacionModal";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import Map from "@/components/Map";
 
 function Home() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [numeroSeguimiento, setNumeroSeguimiento] = useState("");
 
@@ -13,9 +15,9 @@ function Home() {
       setNumeroSeguimiento(location.state.numeroSeguimiento);
       setShowModal(true);
 
-      window.history.replaceState({}, "");
+      navigate("/", { replace: true });
     }
-  }, [location]);
+  }, [location, navigate]);
 
   return (
     <Box
@@ -29,14 +31,7 @@ function Home() {
       pt={20}
     >
       <VStack gap={6}>
-        <Heading 
-          as="h1" 
-          size="2xl" 
-          textAlign="center" 
-          color="gray.800"
-        >
-          Página Principal
-        </Heading>
+        <Map />
       </VStack>
 
       <ConfirmacionModal
