@@ -1,29 +1,69 @@
-import { Box, Heading, VStack } from "@chakra-ui/react";
+import { Box, VStack, Heading, Flex, Text} from "@chakra-ui/react";
+
+type Denuncia = {
+  numero: number;
+  tipo: string;
+  estado: "Pendientes" | "En revisión" | "Resueltas";
+}
+
+const denuncias: Denuncia[] = [{
+  numero: 1234,
+  tipo: "Vías y pavimento",
+  estado: "Pendientes",
+},
+{
+  numero: 5678,
+  tipo: "Recolección de Basura",
+  estado: "Pendientes",
+},
+{
+  numero: 9012,
+  tipo: "Semáforos y señalética",
+  estado: "En revisión"
+},
+{
+  numero: 3456,
+  tipo: "Riesgos Inmediatos",
+  estado: "Resueltas",
+}];
+
+const estados: ("Pendientes" | "En revisión" | "Resueltas")[] = [
+  "Pendientes",
+  "En revisión",
+  "Resueltas",
+];
+
 
 function Seguimiento() {
   return (
-    <Box
-      maxW="600px"
-      mx="auto"
-      p={5}
-      minH="100vh"
-      pt={20}
-      pb={20}
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <VStack gap={6}>
-        <Heading 
-          as="h1" 
-          size="xl" 
-          textAlign="center" 
-          color="gray.800"
-        >
-          Esto es la página de seguimiento
-        </Heading>
+    <Flex justify = "center" p={4}>
+      <VStack align="stretch" w="100%" maxW="md">
+        {estados.map((estado) => (
+          <Box key={estado}>
+            <Heading size="md" mb={4}>
+              {estado}
+            </Heading>
+            <VStack align="stretch">
+              {denuncias.filter((denuncia) => denuncia.estado === estado)
+              .map((denuncia) => (
+                <Box
+                  key = {denuncia.numero}
+                  border = "1px solid gray"
+                  borderRadius ="md"
+                  p={4}
+                  w="100%"
+                  maxW="sm"
+                  bg = "white"
+                >
+                  <Text fontWeight="bold">N° Denuncia: {denuncia.numero}</Text>
+                  <Text>Tipo: {denuncia.tipo}</Text>
+                </Box>
+              ))}
+            </VStack>
+          </Box>
+        ))}
       </VStack>
-    </Box>
+    </Flex>
   );
 }
 
