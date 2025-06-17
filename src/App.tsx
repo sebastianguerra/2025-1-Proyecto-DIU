@@ -13,50 +13,46 @@ const routes = [
     path: "/",
     element: <Home />,
     title: "MuniDenuncia",
-    withBackArrow: false,
   },
   {
     path: "/TipoDenuncia",
     element: <TipoDenuncia />,
     title: "Tipo de Denuncia",
-    withBackArrow: true,
+    backArrowTo: "/",
   },
   {
     path: "/IngresarDenuncia",
     element: <Denuncia />,
     title: "Ingresar Denuncia",
-    withBackArrow: true,
+    backArrowTo: "/TipoDenuncia",
   },
   {
     path: "/Seguimiento",
     element: <Seguimiento />,
     title: "Denuncias activas",
-    withBackArrow: false,
   },
   {
     path: "/Perfil",
     element: <Perfil />,
     title: "Perfil",
-    withBackArrow: false,
   },
   {
     path: "*",
     element: <Navigate to="/" />,
     title: "",
-    withBackArrow: false,
   },
 ];
 
 function App() {
   return (
     <Routes>
-      {routes.map(({ path, title, element }) => (
+      {routes.map(({ path, title, element, backArrowTo }) => (
         <Route
           key={path}
           path={path}
           element={
             <>
-              <Header title={title} />
+              <Header title={title} backArrowTo={backArrowTo} />
               <Box w="100vw" h="100vh" py={20}>
                 {element}
               </Box>

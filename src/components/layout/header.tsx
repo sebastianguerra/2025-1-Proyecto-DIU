@@ -1,9 +1,10 @@
 import { Box, HStack, IconButton, Text } from "@chakra-ui/react";
+import { LuArrowLeft } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import { House } from 'lucide-react';
 
-
-function Header({ title }: { title: string }) {
+function Header(
+  { title, backArrowTo }: { title: string; backArrowTo?: string | undefined },
+) {
   return (
     <Box
       position="fixed"
@@ -13,23 +14,26 @@ function Header({ title }: { title: string }) {
       borderBottomWidth="0.5px"
       borderBottomColor="black"
       padding={4}
-      zIndex={10} 
+      zIndex={10}
     >
       <HStack justify="space-between" w="full">
-        <Link to="/">
+        {backArrowTo && (
           <IconButton
-            aria-label="Inicio"
+            aria-label="Volver"
             colorScheme="teal"
             variant="ghost"
             size="lg"
+            asChild
           >
-            <House />
+            <Link to={backArrowTo}>
+              <LuArrowLeft />
+            </Link>
           </IconButton>
-        </Link>
+        )}
         <Text fontSize="xl" fontWeight="bold" color="#333">
           {title}
         </Text>
-        <Box w="40px" /> 
+        <Box w="40px" />
       </HStack>
     </Box>
   );
