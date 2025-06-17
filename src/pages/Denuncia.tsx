@@ -1,3 +1,4 @@
+import { useDialogs } from "@/DialogsProvider";
 import {
   Box,
   Button,
@@ -14,6 +15,8 @@ const IngresarDenuncia = () => {
   const [fecha, setFecha] = useState("");
   const navigate = useNavigate();
 
+  const { showNotificationDialog } = useDialogs();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -28,6 +31,11 @@ const IngresarDenuncia = () => {
         showConfirmation: true,
         numeroSeguimiento: numeroSeguimiento,
       },
+    });
+
+    showNotificationDialog({
+      title: "Denuncia ingresada correctamente",
+      message: `Número de seguimiento: ${numeroSeguimiento}`,
     });
   };
 
